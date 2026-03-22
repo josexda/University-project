@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 150 25% 12%;
+
+    --card: 40 25% 96%;
+    --card-foreground: 150 25% 12%;
+
+    --popover: 40 33% 98%;
+    --popover-foreground: 150 25% 12%;
+
+    --primary: 152 45% 28%;
+    --primary-foreground: 40 33% 98%;
+
+    --secondary: 35 40% 90%;
+    --secondary-foreground: 150 25% 12%;
+
+    --muted: 40 20% 93%;
+    --muted-foreground: 150 10% 42%;
+
+    --accent: 200 55% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 18% 87%;
+    --input: 40 18% 87%;
+    --ring: 152 45% 28%;
+
+    --radius: 0.625rem;
+
+    --earth: 28 45% 42%;
+    --earth-foreground: 40 33% 98%;
+    --sand: 38 55% 92%;
+    --canopy: 145 35% 22%;
+    --sky: 200 55% 48%;
+    --bark: 25 30% 30%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
